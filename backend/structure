@@ -1,0 +1,24 @@
+backend/
+├── config/
+│   └── db.js
+├── controllers/
+│   ├── authController.js
+│   ├── brandController.js
+│   ├── editionController.js
+│   └── taskController.js
+├── middleware/
+│   ├── auth.js
+│   └── roleCheck.js
+├── models/
+│   ├── Brand.js
+│   ├── Edition.js
+│   ├── Task.js
+│   └── User.js
+├── routes/
+│   ├── auth.js
+│   ├── brands.js
+│   ├── editions.js
+│   └── tasks.js
+├── .env
+├── .gitignore
+└── server.js 

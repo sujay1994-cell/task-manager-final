@@ -1,0 +1,22 @@
+frontend/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── auth/
+│   │   │   ├── Login.js
+│   │   │   └── Register.js
+│   │   ├── brands/
+│   │   ├── editions/
+│   │   ├── tasks/
+│   │   └── layout/
+│   ├── features/
+│   │   ├── auth/
+│   │   ├── brands/
+│   │   ├── editions/
+│   │   └── tasks/
+│   ├── services/
+│   │   └── api.js
+│   ├── utils/
+│   ├── App.js
+│   └── index.js
+└── package.json 

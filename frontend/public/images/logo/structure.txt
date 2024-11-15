@@ -1,0 +1,5 @@
+frontend/public/images/logo/
+├── logo.svg
+├── logo-150.png
+├── logo-300.png
+└── logo-favicon.ico 

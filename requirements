@@ -1,0 +1,46 @@
+Features:
+Brand & Edition Management:
+
+Brand Creation/Deletion: Ability to create, manage, and delete magazine brands.
+Edition Creation/Deletion: Under each brand, create or delete multiple editions (e.g., monthly or quarterly issues).
+Task Creation & Assignment within Editions:
+
+Task Naming Structure: Tasks are created within an edition, following the structure: Brand Name (Magazine) > Edition Name > Task Name.
+Types of tasks: Profile, Cover, Intro, Editorial, Ads, etc.
+Upload and assign files (images, audio, documents, etc.) when creating a task.
+Fast and User-Friendly Interface:
+
+Simple UI: Clean, intuitive dashboard for each department.
+Quick access to current tasks, approvals, feedback, and completed tasks.
+Easy navigation to manage brands, editions, and tasks.
+Department Dashboards:
+
+Sales Dashboard: Manage client materials, create tasks, assign to other departments (Editorial or Design), track task status, and upload client feedback.
+Editorial Dashboard: View assigned tasks, manage team member assignments, upload edited documents, approve or request changes from other departments.
+Design Dashboard: Similar to Editorial; upload final designs, request proofreads, and manage approval loops.
+Task Workflow:
+
+Each task goes through a multi-step workflow: creation, assignment, review, feedback, rework, and completion.
+Real-time task updates and status indicators (e.g., In Progress, Awaiting Approval, Completed).
+Notifications for task status changes, reassignments, or requests for feedback.
+Task Versions & File Handling:
+
+Upload multiple files per task with version tracking to easily manage changes.
+Comments and notes per task for department-to-department communication and feedback.
+Notifications & Activity Feed:
+
+Real-time notifications when tasks are assigned, files are uploaded, or when rework is required.
+Each department gets notified about new tasks and approvals.
+Task Closure:
+
+Sales team closes the task once the final document/creative is approved by the client.
+Tasks can be reopened for edits if further client changes are requested.
+Performance Optimization:
+
+Speed: Optimized for fast task handling and quick uploads/downloads.
+Lightweight front-end to ensure quick load times and responsive interactions.
+Simplified UI Design:
+Minimalist, user-friendly design, with a focus on:
+Task filtering by department, edition, or task type.
+Drag-and-drop task assignment (optional).
+Clear task progress indicators with minimal clicks to perform key actions.

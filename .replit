@@ -1,0 +1,26 @@
+language = "nodejs"
+run = "npm run dev"
+entrypoint = "backend/server.js"
+
+[env]
+NODE_ENV = "development"
+
+[nix]
+channel = "stable-22_11"
+
+[deployment]
+run = ["sh", "-c", "npm start"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 3001
+externalPort = 3001
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 5001
+externalPort = 3000
+  

@@ -1,0 +1,25 @@
+{
+  "short_name": "MagazineTaskManager",
+  "name": "Magazine Task Manager",
+  "icons": [
+    {
+      "src": "images/logo/logo-favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "images/logo/logo-150.png",
+      "type": "image/png",
+      "sizes": "150x150"
+    },
+    {
+      "src": "images/logo/logo-300.png",
+      "type": "image/png",
+      "sizes": "300x300"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ff6b00",
+  "background_color": "#ffffff"
+} 

@@ -1,0 +1,80 @@
+/* Logo styles */
+.app-logo {
+  height: 40px;
+  width: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .app-logo {
+    height: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .app-logo {
+    height: 48px;
+  }
+}
+
+.app-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Header styles */
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #FF6B00;
+  margin-left: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-logo {
+    height: 32px;
+    padding: 3px;
+  }
+
+  .app-name {
+    display: none;
+  }
+
+  .header-container {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .header-container {
+    background-color: #1a1a1a;
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .app-name {
+    color: #FF9B00;
+  }
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+} 

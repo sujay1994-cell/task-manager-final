@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: development
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=development
+      - MONGODB_URI=mongodb://${MONGO_USER}:${MONGO_PASSWORD}@mongodb:27017/${MONGO_DB}?authSource=admin
+      - JWT_SECRET=dev_secret
+      - UPLOAD_PATH=/app/uploads
+      - REDIS_URI=redis://redis:6379
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+      - uploads:/app/uploads
+    command: npm run dev
+    networks:
+      - frontend-network
+      - backend-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - REACT_APP_API_URL=http://localhost:5000
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: npm start
+    networks:
+      - frontend-network
+
+  mongodb:
+    image: mongo:latest
+    container_name: magazine-mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=dev_user
+      - MONGO_INITDB_ROOT_PASSWORD=dev_password
+      - MONGO_INITDB_DATABASE=magazine_dev
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - backend-network
+
+  redis:
+    image: redis:alpine
+    container_name: magazine-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - backend-network
+
+volumes:
+  mongodb_data:
+  redis_data:
+  uploads:
+
+networks:
+  frontend-network:
+    driver: bridge
+  backend-network:
+    driver: bridge
+    internal: true
